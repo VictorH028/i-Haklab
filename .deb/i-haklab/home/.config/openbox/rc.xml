@@ -1,0 +1,116 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<openbox_config xmlns="http://openbox.org/3.4/rc">
+  <keyboard>
+
+    <!-- ============ LANZADORES ============ -->
+    <!-- Lanzador rofi -->
+    <keybind key="A-d">
+      <action name="Execute">
+        <command>~/.config/rofi/bin/launcher</command>
+      </action>
+    </keybind>
+
+    <!-- Menú de apagado -->
+    <keybind key="A-x">
+      <action name="Execute">
+        <command>~/.config/rofi/bin/powermenu</command>
+      </action>
+    </keybind>
+
+    <!-- ============ TERMINALES (lo importante) ============ -->
+    <!-- Terminal principal -->
+    <keybind key="A-Return">
+      <action name="Execute">
+        <command>termux-launch-terminal</command>
+      </action>
+    </keybind>
+
+    <!-- Terminal flotante / scratchpad -->
+    <keybind key="A-t">
+      <action name="Execute">
+        <command>termux-launch-terminal</command>
+      </action>
+    </keybind>
+
+    <!-- Terminal en nueva ventana VNC (por si usas xterm) -->
+    <keybind key="C-A-Return">
+      <action name="Execute">
+        <command>xterm -fa 'Monospace' -fs 11</command>
+      </action>
+    </keybind>
+
+    <!-- ============ CONTROL DE MÚSICA / RED / BATERÍA ============ -->
+    <keybind key="A-m">
+      <action name="Execute">
+        <command>~/.config/rofi/bin/mpd</command>
+      </action>
+    </keybind>
+
+    <keybind key="A-n">
+      <action name="Execute">
+        <command>~/.config/rofi/bin/network</command>
+      </action>
+    </keybind>
+
+    <keybind key="A-b">
+      <action name="Execute">
+        <command>~/.config/rofi/bin/battery</command>
+      </action>
+    </keybind>
+
+    <!-- ============ GESTIÓN DE VENTANAS ============ -->
+    <keybind key="A-F4">
+      <action name="Close"/>
+    </keybind>
+
+    <keybind key="A-F10">
+      <action name="ToggleMaximize"/>
+    </keybind>
+
+    <keybind key="A-F9">
+      <action name="Iconify"/>
+    </keybind>
+
+    <!-- Moverse entre escritorios -->
+    <keybind key="C-A-Left">
+      <action name="GoToDesktop"><to>previous</to></action>
+    </keybind>
+    <keybind key="C-A-Right">
+      <action name="GoToDesktop"><to>next</to></action>
+    </keybind>
+
+    <!-- ============ TILING MANUAL (muy útil en terminal) ============ -->
+    <!-- Ventana a la mitad izquierda -->
+    <keybind key="A-Left">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>0</x><y>0</y>
+        <width>50%</width><height>100%</height>
+      </action>
+    </keybind>
+
+    <!-- Ventana a la mitad derecha -->
+    <keybind key="A-Right">
+      <action name="UnmaximizeFull"/>
+      <action name="MoveResizeTo">
+        <x>-0</x><y>0</y>
+        <width>50%</width><height>100%</height>
+        <gravity>NorthEast</gravity>
+      </action>
+    </keybind>
+
+    <!-- Ventana a pantalla completa -->
+    <keybind key="A-Up">
+      <action name="ToggleFullscreen"/>
+    </keybind>
+
+    <!-- ============ MOVER VENTANAS ENTRE ESCRITORIOS ============ -->
+    <keybind key="C-A-S-Left">
+      <action name="SendToDesktop"><to>previous</to></action>
+    </keybind>
+    <keybind key="C-A-S-Right">
+      <action name="SendToDesktop"><to>next</to></action>
+    </keybind>
+
+  </keyboard>
+</openbox_config>

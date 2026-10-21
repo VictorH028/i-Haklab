@@ -10,7 +10,7 @@ require('toggleterm').setup({
   float_opts = {  -- Tamaño y posicion de terminal
     border = 'double',
     width = 90,
-    height = 25,
+    height = 15,
     winblend = 3,
     zindex = 6,
   },

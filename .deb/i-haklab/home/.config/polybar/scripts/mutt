@@ -1,3 +1,8 @@
 #!/data/data/com.termux/files/usr/bin/sh
 
-xfce4-terminal -e mutt
+if command -v xfce4-terminal &>/dev/null; then
+    xfce4-terminal -e mutt
+else
+    xterm -e mutt
+fi
+
