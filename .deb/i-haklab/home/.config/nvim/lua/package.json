@@ -1,0 +1,14 @@
+{
+  "name": "nvim",
+  "version": "1.0.0",
+  "description": "Manifiesto de snippets VSCode de la configuración de Neovim",
+  "type": "commonjs",
+  "contributes": {
+    "snippets": [
+      {
+        "language": "aguila",
+        "path": "./snippets/aguila.json"
+      }
+    ]
+  }
+}
